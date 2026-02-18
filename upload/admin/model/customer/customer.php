@@ -106,6 +106,18 @@ class Customer extends \Opencart\System\Engine\Model {
 	}
 
 	/**
+	 * Edit Status
+	 *
+	 * @param int  $customer_id primary key of the customer record
+	 * @param bool $status
+	 *
+	 * @return void
+	 */
+	public function editStatus(int $customer_id, bool $status): void {
+		$this->db->query("UPDATE `" . DB_PREFIX . "customer` SET `status` = '" . (bool)$status . "' WHERE `customer_id` = '" . (int)$customer_id . "'");
+	}
+
+	/**
 	 * Delete Customer
 	 *
 	 * Delete customer record in the database.

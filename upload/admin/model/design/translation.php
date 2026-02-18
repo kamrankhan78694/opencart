@@ -228,6 +228,8 @@ class Translation extends \Opencart\System\Engine\Model {
 	 *
 	 * Get the total number of translation records in the database.
 	 *
+	 * @param array<string, mixed> $data array of filters
+	 *
 	 * @return int total number of translation records
 	 *
 	 * @example
@@ -236,7 +238,7 @@ class Translation extends \Opencart\System\Engine\Model {
 	 *
 	 * $translation_total = $this->model_design_translation->getTotalTranslations();
 	 */
-	public function getTotalTranslations(): int {
+	public function getTotalTranslations(array $data = []): int {
 		$sql = "SELECT COUNT(*) AS `total` FROM `" . DB_PREFIX . "translation`";
 
 		$implode = [];

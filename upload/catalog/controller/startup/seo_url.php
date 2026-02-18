@@ -7,9 +7,12 @@ namespace Opencart\Catalog\Controller\Startup;
  */
 class SeoUrl extends \Opencart\System\Engine\Controller {
 	/**
-	 * @var array<string, string>
+	 * @var array<string, array<int, array<string, mixed>>>
 	 */
 	private array $regex = [];
+	/**
+	 * @var array<string, array<string, mixed>>
+	 */
 	private array $data = [];
 
 	/**
@@ -73,6 +76,8 @@ class SeoUrl extends \Opencart\System\Engine\Controller {
 				$this->request->get['route'] = $this->config->get('action_error');
 			}
 		}
+
+		return null;
 	}
 
 	/**

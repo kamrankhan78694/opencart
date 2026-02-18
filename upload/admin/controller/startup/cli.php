@@ -41,14 +41,11 @@ class Cli extends \Opencart\System\Engine\Controller {
 						fwrite(STDOUT, $this->language->get('text_start') . "\n");
 					}
 
-					return new \Opencart\System\Engine\Action('marketplace/task.cli', $argv);
+					return new \Opencart\System\Engine\Action('marketplace/task.cli');
 
-					break;
 				case 'usage':
 				default:
-					return new \Opencart\System\Engine\Action('startup/task.usage', $argv);
-
-					break;
+					return new \Opencart\System\Engine\Action('startup/task.usage');
 			}
 		}
 
@@ -60,11 +57,11 @@ class Cli extends \Opencart\System\Engine\Controller {
 	 *
 	 * @return \Opencart\System\Engine\Action|null
 	 */
-	public function usage() {
-
+	public function usage(): ?\Opencart\System\Engine\Action {
+		return null;
 	}
 
-	public function end() {
+	public function end(): void {
 		//if () {
 
 		//}

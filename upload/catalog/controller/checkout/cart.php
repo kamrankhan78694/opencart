@@ -209,7 +209,7 @@ class Cart extends \Opencart\System\Engine\Controller {
 	/**
 	 * Index
 	 *
-	 * @return array<string, mixed>
+	 * @return void
 	 */
 	public function json(): void {
 		$this->load->language('common/cart');

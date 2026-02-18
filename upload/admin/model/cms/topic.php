@@ -136,6 +136,20 @@ class Topic extends \Opencart\System\Engine\Model {
 	}
 
 	/**
+	 * Edit Status
+	 *
+	 * @param int  $topic_id primary key of the topic record
+	 * @param bool $status
+	 *
+	 * @return void
+	 */
+	public function editStatus(int $topic_id, bool $status): void {
+		$this->db->query("UPDATE `" . DB_PREFIX . "topic` SET `status` = '" . (bool)$status . "' WHERE `topic_id` = '" . (int)$topic_id . "'");
+
+		$this->cache->delete('topic');
+	}
+
+	/**
 	 * Delete Topic
 	 *
 	 * Delete topic record in the database.
