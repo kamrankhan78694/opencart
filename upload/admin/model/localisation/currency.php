@@ -94,6 +94,20 @@ class Currency extends \Opencart\System\Engine\Model {
 	}
 
 	/**
+	 * Edit Status
+	 *
+	 * @param int  $currency_id primary key of the currency record
+	 * @param bool $status
+	 *
+	 * @return void
+	 */
+	public function editStatus(int $currency_id, bool $status): void {
+		$this->db->query("UPDATE `" . DB_PREFIX . "currency` SET `status` = '" . (bool)$status . "' WHERE `currency_id` = '" . (int)$currency_id . "'");
+
+		$this->cache->delete('currency');
+	}
+
+	/**
 	 * Delete Currency
 	 *
 	 * Delete currency record in the database.

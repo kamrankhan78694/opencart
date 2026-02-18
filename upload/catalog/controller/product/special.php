@@ -9,7 +9,7 @@ class Special extends \Opencart\System\Engine\Controller {
 	/**
 	 * Index
 	 *
-	 * @return void
+	 * @return mixed
 	 */
 	public function index() {
 		if (isset($this->request->get['product_id'])) {

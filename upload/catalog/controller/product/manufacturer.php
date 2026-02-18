@@ -9,7 +9,7 @@ class Manufacturer extends \Opencart\System\Engine\Controller {
 	/**
 	 * Index
 	 *
-	 * @return void
+	 * @return mixed
 	 */
 	public function index() {
 		if (isset($this->request->get['manufacturer_id'])) {

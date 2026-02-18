@@ -451,7 +451,7 @@ class Coupon extends \Opencart\System\Engine\Controller {
 			$this->load->model('marketing/coupon');
 
 			foreach ($selected as $coupon_id) {
-				$this->model_marketing_affiliate->editStatus((int)$coupon_id, false);
+				$this->model_marketing_coupon->editStatus((int)$coupon_id, false);
 			}
 
 			$json['success'] = $this->language->get('text_success');

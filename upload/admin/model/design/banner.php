@@ -294,7 +294,7 @@ class Banner extends \Opencart\System\Engine\Model {
 	 *
 	 * @param int $banner_id primary key of the banner record
 	 *
-	 * @return array<int, array<int, array<string, mixed>>> image records that have banner ID
+	 * @return array<int, array<string, mixed>> image records that have banner ID
 	 *
 	 * @example
 	 *

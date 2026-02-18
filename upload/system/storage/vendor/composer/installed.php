@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'opencart/opencart',
-        'pretty_version' => 'dev-master',
-        'version' => 'dev-master',
-        'reference' => 'fe69569d59913ba23afaa72d7bb1e07476ba797a',
+        'pretty_version' => 'dev-copilot/fix-critical-and-moderate-bugs',
+        'version' => 'dev-copilot/fix-critical-and-moderate-bugs',
+        'reference' => 'a6c03266e23dc5dd56acb49e1bbc83f35b657058',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../../../../',
         'aliases' => array(),
@@ -65,9 +65,9 @@
             'dev_requirement' => false,
         ),
         'opencart/opencart' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
-            'reference' => 'fe69569d59913ba23afaa72d7bb1e07476ba797a',
+            'pretty_version' => 'dev-copilot/fix-critical-and-moderate-bugs',
+            'version' => 'dev-copilot/fix-critical-and-moderate-bugs',
+            'reference' => 'a6c03266e23dc5dd56acb49e1bbc83f35b657058',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../../../../',
             'aliases' => array(),

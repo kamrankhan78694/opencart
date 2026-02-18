@@ -80,6 +80,20 @@ class Zone extends \Opencart\System\Engine\Model {
 	}
 
 	/**
+	 * Edit Status
+	 *
+	 * @param int  $zone_id primary key of the zone record
+	 * @param bool $status
+	 *
+	 * @return void
+	 */
+	public function editStatus(int $zone_id, bool $status): void {
+		$this->db->query("UPDATE `" . DB_PREFIX . "zone` SET `status` = '" . (bool)$status . "' WHERE `zone_id` = '" . (int)$zone_id . "'");
+
+		$this->cache->delete('zone');
+	}
+
+	/**
 	 * Delete Zone
 	 *
 	 * Delete zone record in the database.
